@@ -7,9 +7,10 @@
   flex: 25% 0;
 }
 
-img {
+img, iframe {
   border-bottom: 0.25rem solid #fc0;
   border-radius: 0.25rem 0.25rem 0 0;
+  aspect-ratio: 16 / 9;
   height: auto;
   width: 100%;
   object-fit: cover;
@@ -41,12 +42,10 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .card:last-child {
-    width: unset;
-    grid-column: span 2;
+  img {
+    min-height: 16rem;
   }
-  }
+}
 
 /* Desktop (min-width: 1200px): 3 × 3 (33% width cards) */
 @media only screen and (min-width: 1200px) {
@@ -55,7 +54,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  img {
+  img, iframe {
     min-height: 16.375rem;
   }
 }
